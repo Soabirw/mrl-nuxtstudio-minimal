@@ -8,7 +8,7 @@ export default defineContentConfig({
     }),
     insights: defineCollection({
       type: 'page',
-      source: '/insights/**',
+      source: '**/insights/**',
       schema: z.object({
         date: z.date(),
         image: z.string(),
