@@ -23,5 +23,14 @@ a:hover {
     @apply underline;
 }
 
+ol {
+    list-style: decimal;
+    padding-left: 1rem;
+}
+
 @tailwind components;
 @tailwind utilities;
+
+.prayer-name {
+    @apply font-semibold;
+}

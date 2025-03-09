@@ -28,8 +28,8 @@ const uiOverride = {
 </script>
 
 <template>
-  <header class="flex bg-yellow-900">
-    <UContainer class="">
+  <header class="flex bg-di-serria-800">
+    <UContainer>
       <UHorizontalNavigation :links="links" :ui="uiOverride">
       </UHorizontalNavigation>
     </UContainer>
