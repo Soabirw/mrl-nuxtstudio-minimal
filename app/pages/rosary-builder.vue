@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import {computed} from 'vue'
 
 const items = [
   {
@@ -42,14 +43,20 @@ const setOptions = [{
 ]
 
 const dailyMystery = {
+  'sunday': 'glorious', // TODO: adjust for advent, christmas, lent, etc
   'monday': 'joyful',
   'tuesday': 'sorrowful',
   'wednesday': 'glorious',
   'thursday': 'luminous',
   'friday': 'sorrowful',
-  'saturday': 'glorious',
-  'sunday': 'glorious', // TODO: adjust for advent, christmas, lent, etc
+  'saturday': 'joyful',
 }
+const today = new Date().getDay();
+const shouldShowGlorious = computed(() => ((selectedSet.value === 'daily' && (today === 0 || today === 3) || selectedSet.value === 'glorious')))
+const shouldShowJoyful = computed(() => ((selectedSet.value === 'daily' && (today === 1 || today === 6) || selectedSet.value === 'joyful')))
+const shouldShowSorrowful = computed(() => ((selectedSet.value === 'daily' && (today === 2 || today === 5) || selectedSet.value === 'sorrowful')))
+const shouldShowLuminous = computed(() => ((selectedSet.value === 'daily' && today === 4) || selectedSet.value === 'luminous'))
+
 </script>
 
 <template>
@@ -84,7 +91,10 @@ const dailyMystery = {
     <template #rosary>
       <RosaryOpeningPrayers v-if="user.showOpeningPrayers"/>
 
-      <RosaryJoyfulSet/>
+      <RosaryJoyfulSet v-if="shouldShowJoyful"/>
+      <RosaryLuminousSet v-if="shouldShowLuminous"/>
+      <RosarySorrowfulSet v-if="shouldShowSorrowful"/>
+      <RosaryGloriousSet v-if="shouldShowGlorious"/>
 
       <RosaryClosingPrayers v-if="user.showClosingPrayers"/>
     </template>
