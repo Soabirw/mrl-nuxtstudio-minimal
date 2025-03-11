@@ -2,7 +2,6 @@
 import {defineProps} from 'vue'
 
 const user = useUserStore()
-const focusInsight = useFocusInsightStore()
 
 const props = defineProps(['insights'])
 </script>
@@ -10,7 +9,7 @@ const props = defineProps(['insights'])
 <template>
   <ol v-if="user.showFocusInsights">
     <li v-for="insight in props.insights" :key="insight.id">
-      {{ insight.text }}
+      {{ insight.text[(user.focusInsightStyle || 'Summary').toLowerCase()] }}
       <UTooltip v-if="insight.link" :text="insight.link.tip">
         <a :href="insight.link.url" target="_blank">{{ insight.link.label }}</a>
       </UTooltip>

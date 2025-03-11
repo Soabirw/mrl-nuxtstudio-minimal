@@ -1,44 +1,31 @@
 <script setup lang="ts">
 const user = useUserStore()
 const prayer = usePrayerStore()
+const focusInsight = useFocusInsightStore()
+
+const mysterySets = [
+  {
+    id: 'LM01',
+    announcement: 'The First Luminous Mystery – The Baptism of the Lord',
+    fruit: 'Gratitude for the Gift of Faith',
+    insights: focusInsight.luminousInsights.first
+  },
+]
 </script>
 
 <template>
   <div>
-    <p>Announce “<span class="prayer-name">The First Luminous Mystery – The Baptism of the Lord</span>”</p>
+    <section v-for="mystery in mysterySets" :key="mystery.id">
+      <RosaryMysteryAnnounce :name="mystery.announcement"/>
 
-    <p v-if="user.showMysterySummaries"></p>
+      <RosaryMysteryOpeningPrayers/>
 
-    <p>Say the <span class="prayer-name">Our Father</span></p>
+      <RosarySpiritualFruit :fruit="mystery.fruit"/>
 
-    <p v-if="user.showPrayerText">
-      {{ prayer.ourFather }}
-    </p>
+      <RosaryFocusInsights :insights="mystery.insights"/>
 
-    <p>Say ten <span class="prayer-name">Hail Marys</span> while meditating on the Mystery.</p>
-
-    <p>Spiritual Fruit: <span class="prayer-name">Gratitude for the Gift of Faith</span></p>
-
-    <ol v-if="user.showFocusInsights">
-      <li>A voice cries out in the wilderness. Mk. 1:3</li>
-      <li>John the Baptist preaches repentance. Mat. 3:1-2</li>
-      <li>John proclaims that One is coming “the thong of whose sandals I am not worthy to unloose.” Mk. 1:7</li>
-      <li>Jesus approaches John to be baptized. Mat. 3:13</li>
-      <li>John protests that Jesus should be the one baptizing him instead. Mat. 3:14</li>
-      <li>Jesus answers that it must be so for now. Mat. 3:15</li>
-      <li>The heavens open; the Spirit descends. Mat. 3:16</li>
-      <li>A voice from heaven says, “This is my beloved Son, in whom I am well pleased.” Mat. 3:17</li>
-      <li>There is One Lord, One Faith, One Baptism. Eph. 4:5</li>
-      <li>We were baptized into His death in order to be raised to new life in Him. Rm. 6:4</li>
-    </ol>
-
-    <p>Close decade with <span class="prayer-name">Glory Be</span></p>
-
-    <p v-if="user.showPrayerText">{{ prayer.gloryBe }}</p>
-
-    <p><span class="prayer-name">Oh My Jesus (Fatima, optional)</span></p>
-
-    <p v-if="user.showPrayerText">{{ prayer.fatimaOhMyJesus }}</p>
+      <RosaryMysteryClosingPrayers/>
+    </section>
 
     <p>Announce “<span class="prayer-name">The Second Luminous Mystery – The Wedding in Cana</span>”</p>
 
