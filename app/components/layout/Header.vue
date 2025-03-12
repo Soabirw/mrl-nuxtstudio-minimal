@@ -6,8 +6,8 @@ const links = [
     icon: 'tabler:home-filled',
   },
   {
-    label: 'Rosary Builder',
-    to: '/rosary-builder',
+    label: 'Rosaries',
+    to: '/rosaries',
     icon: 'game-icons:prayer-beads',
   },
   {

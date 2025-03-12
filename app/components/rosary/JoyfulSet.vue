@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const user = useUserStore()
-const prayer = usePrayerStore()
 const focusInsight = useFocusInsightStore()
 
 const mysterySets = [
@@ -38,19 +36,7 @@ const mysterySets = [
 </script>
 
 <template>
-  <div>
-    <section v-for="mystery in mysterySets" :key="mystery.id">
-      <RosaryMysteryAnnounce :name="mystery.announcement"/>
-
-      <RosaryMysteryOpeningPrayers/>
-
-      <RosarySpiritualFruit :fruit="mystery.fruit"/>
-
-      <RosaryFocusInsights :insights="mystery.insights"/>
-
-      <RosaryMysteryClosingPrayers/>
-    </section>
-  </div>
+  <RosaryMysterySetRenderer :mysterySets="mysterySets" />
 </template>
 
 <style scoped>

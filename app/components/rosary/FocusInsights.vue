@@ -7,14 +7,15 @@ const props = defineProps(['insights'])
 </script>
 
 <template>
-  <ol v-if="user.showFocusInsights">
-    <li v-for="insight in props.insights" :key="insight.id">
-      {{ insight.text[(user.focusInsightStyle || 'Summary').toLowerCase()] }}
-      <UTooltip v-if="insight.link" :text="insight.link.tip">
+  <UFormGroup>
+    <div v-for="insight in props.insights" :key="insight.id">
+      <UCheckbox :id="insight.id" type="checkbox" class="inline-block align-top mt-2"/>
+      <div class="inline-block py-1 w-5/6">
+        <label :for="insight.id" class="px-2">{{ insight.text[(user.focusInsightStyle || 'Summary').toLowerCase()] }}</label>
         <a :href="insight.link.url" target="_blank">{{ insight.link.label }}</a>
-      </UTooltip>
-    </li>
-  </ol>
+      </div>
+    </div>
+  </UFormGroup>
 </template>
 
 <style scoped>
