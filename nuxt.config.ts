@@ -7,6 +7,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
   ],
+  content: {
+    documentDriven: true,
+    experimental: {
+      clientDB: true // Enable client-side content access
+    }
+  },
   devtools: { enabled: true },
   css: [
       './assets/css/tailwind.css'
