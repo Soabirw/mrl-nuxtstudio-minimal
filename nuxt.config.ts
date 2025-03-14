@@ -6,15 +6,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
   ],
-  nitro: {
-    preset: 'aws-amplify',
-    prerender: {
-      crawlLinks: true,
-      routes: [
-          '/'
-      ]
-    }
-  },
   devtools: { enabled: true },
   css: [
       './assets/css/tailwind.css'
