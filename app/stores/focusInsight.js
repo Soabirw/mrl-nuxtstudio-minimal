@@ -826,7 +826,7 @@ export const useFocusInsightStore = defineStore('focusInsight', () => {
                 id: 'LFI204',
                 text: {
                     summary: 'Mary tells the servants to do whatever He asks.',
-                    scriptural: 'And Jesus said to her, “O woman, what have you to do with me? My hour has not yet come.”'
+                    scriptural: 'His mother said to the servants, “Do whatever he tells you.”'
                 },
                 link: {
                     label: 'Jn. 2:5',
@@ -1317,24 +1317,24 @@ export const useFocusInsightStore = defineStore('focusInsight', () => {
                 id: 'SFI104',
                 text: {
                     summary: '“Father, if it be Thy will, let this cup pass from Me.”',
-                    scriptural: 'And going a little farther he fell on his face and prayed, “My Father, if it be possible, let this cup pass from me; nevertheless, not as I will, but as thou wilt.”'
+                    scriptural: 'And going a little farther he fell on his face and prayed, “My Father, if it be possible, let this cup pass from me; ...”'
                 },
                 link: {
                     label: 'Mat. 26:39',
                     url: 'https://www.biblegateway.com/passage/?search=Mat.%2026%3A39&version=RSVCE',
-                    tip: 'And going a little farther he fell on his face and prayed, “My Father, if it be possible, let this cup pass from me; nevertheless, not as I will, but as thou wilt.”'
+                    tip: 'And going a little farther he fell on his face and prayed, “My Father, if it be possible, let this cup pass from me; ...”'
                 }
             },
             {
                 id: 'SFI105',
                 text: {
                     summary: '“Yet, not My will, but Thine be done.”',
-                    scriptural: 'And going a little farther he fell on his face and prayed, “My Father, if it be possible, let this cup pass from me; nevertheless, not as I will, but as thou wilt.”'
+                    scriptural: '"...nevertheless, not as I will, but as thou wilt.”'
                 },
                 link: {
                     label: 'Mat. 26:39',
                     url: 'https://www.biblegateway.com/passage/?search=Mat.%2026%3A39&version=RSVCE',
-                    tip: 'And going a little farther he fell on his face and prayed, “My Father, if it be possible, let this cup pass from me; nevertheless, not as I will, but as thou wilt.”'
+                    tip: '"...nevertheless, not as I will, but as thou wilt.”'
                 }
             },
             {
@@ -1843,24 +1843,24 @@ export const useFocusInsightStore = defineStore('focusInsight', () => {
                 id: 'SFI506',
                 text: {
                     summary: 'Jesus endures the terrible torture of the Cross for three hours.',
-                    scriptural: 'Now from the sixth hour there was darkness over all the land[a] until the ninth hour.'
+                    scriptural: 'Now from the sixth hour ... until the ninth hour.'
                 },
                 link: {
                     label: 'Mat. 27:45',
                     url: 'https://www.biblegateway.com/passage/?search=Mat.%2027%3A45&version=RSVCE',
-                    tip: 'Now from the sixth hour there was darkness over all the land until the ninth hour.'
+                    tip: 'Now from the sixth hour ... until the ninth hour.'
                 }
             },
             {
                 id: 'SFI507',
                 text: {
                     summary: 'Nature itself seemed in mourning, for darkness covered the earth.',
-                    scriptural: 'Now from the sixth hour there was darkness over all the land until the ninth hour.'
+                    scriptural: '...there was darkness over all the land until the ninth hour.'
                 },
                 link: {
                     label: 'Mat. 27:45',
                     url: 'https://www.biblegateway.com/passage/?search=Mat.%2027%3A45&version=RSVCE',
-                    tip: 'Now from the sixth hour there was darkness over all the land until the ninth hour.'
+                    tip: '...there was darkness over all the land until the ninth hour.'
                 }
             },
             {

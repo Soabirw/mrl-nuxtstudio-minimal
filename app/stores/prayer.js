@@ -10,6 +10,12 @@ export const usePrayerStore = defineStore('prayer', () => {
     const hailHolyQueen = 'Hail Holy Queen, Mother of Mercy, our Life, our Sweetness, and our hope. To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this vale of tears. Turn then most gracious advocate, Thine eyes of mercy toward us, and after this, our exile, show unto us, the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary. Pray for us O Holy Mother of God, That we may be made worthy of the promises of Christ. Amen.'
     const concludingPrayer = 'Let us pray. O God, whose only begotten Son, by His life, death, and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating upon these mysteries of the Most Holy Rosary of the Blessed Virgin Mary, we may imitate what they contain and obtain what they promise, through the same Christ Our Lord. Amen.'
 
+    const stMichaelPrayer = 'St. Michael, the Archangel, defend us in battle; be our defense against the wickedness and snares of the devil. May God rebuke him, we humbly pray; and do you, O Prince of the heavenly host, by the power of God, thrust into hell Satan and the other evil spirits who prowl about the world seeking the ruin of souls. Amen.'
+    const guardianAngelShortPrayer = 'O angel of God, my guardian dear, To whom his love commits me here. Ever this day, be at my side, To watch and guard, to rule and guide. Amen.'
+    const guardianAngelLongPrayer = "Angel of God, whom God has appointed to be my protector against all things evil: be always at my side, and keep me aware of your presence as God's messenger to me all the days of my life, for my good. Pray for me this day and every day of my life in this world. Amen."
+    const stGabrielPrayer = 'O God, Who from among all Your angels chose the Archangel Gabriel to announce the mystery of the Incarnation, mercifully grant that we who solemnly remember him on earth may feel the benefits of his patronage in Heaven, who lives and reigns for ever and ever. Amen.'
+    const stRaphaelPrayer = 'O God, send the Archangel Raphael to our assistance. May he who stands forever praising You at Your throne present our humble petitions to be blessed by You. Through Christ our Lord. Amen.'
+
     return {
         signOfTheCross,
         apostlesCreed,
@@ -18,6 +24,11 @@ export const usePrayerStore = defineStore('prayer', () => {
         gloryBe,
         fatimaOhMyJesus,
         hailHolyQueen,
-        concludingPrayer
+        concludingPrayer,
+        stMichaelPrayer,
+        guardianAngelShortPrayer,
+        guardianAngelLongPrayer,
+        stGabrielPrayer,
+        stRaphaelPrayer
     }
 })

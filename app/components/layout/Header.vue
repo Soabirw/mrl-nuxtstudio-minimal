@@ -11,6 +11,11 @@ const links = [
     icon: 'game-icons:prayer-beads',
   },
   {
+    label: 'Chaplets',
+    to: '/chaplets',
+    icon: 'mdi:book-cross',
+  },
+  {
     label: 'Insights',
     to: '/insights',
     icon: 'clarity:library-solid',
