@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   tailwindcss: {
     configPath: './tailwind.config.ts', // Make sure this matches your actual file name
-    cssPath: '~/assets/css/tailwind.css'
+    cssPath: './assets/css/tailwind.css'
   },
   future: {
     compatibilityVersion: 4,
