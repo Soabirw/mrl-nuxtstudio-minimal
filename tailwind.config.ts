@@ -9,12 +9,6 @@ export default <Partial<Config>>{
         './plugins/**/*.{js,ts}',
         './nuxt.config.{js,ts}',
     ],
-    safelist: [
-        'mr-4',
-        'w-30',
-        'h-30'
-        // Add other classes that are being purged
-    ],
     theme: {
         extend: {
             colors: {
