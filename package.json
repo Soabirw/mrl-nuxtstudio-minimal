@@ -23,5 +23,10 @@
     "@iconify-json/game-icons": "^1.2.1",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/tabler": "^1.2.17"
+  },
+  "resolutions": {
+    "tailwindcss": "4.0.7",
+    "@tailwindcss/postcss": "4.0.7",
+    "@tailwindcss/vite": "4.0.7"
   }
 }

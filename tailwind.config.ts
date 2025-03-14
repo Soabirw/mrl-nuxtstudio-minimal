@@ -5,7 +5,6 @@ export default <Partial<Config>>{
         './components/**/*.{js,vue,ts}',
         './layouts/**/*.vue',
         './pages/**/*.vue',
-        './pages/insights/*.vue',
         './plugins/**/*.{js,ts}',
         './nuxt.config.{js,ts}',
     ],
