@@ -13,6 +13,12 @@ export default defineNuxtConfig({
       clientDB: true // Enable client-side content access
     }
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      failOnError: false, // Prevents generation from failing on 404s
+    },
+  },
   devtools: { enabled: true },
   css: [
       './assets/css/tailwind.css'
