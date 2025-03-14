@@ -7,17 +7,13 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
   ],
-  content: {
-    documentDriven: true,
-    experimental: {
-      clientDB: true // Enable client-side content access
-    }
-  },
   nitro: {
+    preset: 'aws-amplify',
     prerender: {
       crawlLinks: true,
-      failOnError: false, // Prevents generation from failing on 404s
-    },
+      routes: ['/'],
+      ignore: ['/api']
+    }
   },
   devtools: { enabled: true },
   css: [
