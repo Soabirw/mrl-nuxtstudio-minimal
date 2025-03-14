@@ -11,7 +11,11 @@ export default defineNuxtConfig({
     preset: 'aws-amplify',
     prerender: {
       crawlLinks: true,
-      routes: ['/'],
+      routes: [
+          '/',
+          '/rosaries',
+          '/rosaries/full'
+      ],
       ignore: ['/api']
     }
   },
