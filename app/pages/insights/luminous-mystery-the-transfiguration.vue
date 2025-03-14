@@ -3,6 +3,7 @@ definePageMeta({
   title: 'Luminous Mystery: The Transfiguration',
   excerpt: 'The Transfiguration teaches us profound lessons about faith, courage, and the power of divine revelation. Jesus strengthens His disciples before their trials—just as we must deepen our faith in times of struggle. But have you ever considered why He spoke with Moses and Elijah? This moment highlights the living communion of saints and the importance of seeking spiritual guidance. Discover how this Luminous Mystery connects to Marian apparitions like Lourdes and what it reveals about strengthening your relationship with Christ.',
   featuredImage: '/img/transfiguration-01.png',
+  thumbImage: '/img/transfiguration-01-thumb.png',
   layout: 'insight'
 })
 const route = useRoute()
@@ -10,7 +11,7 @@ const route = useRoute()
 
 <template>
 
-  <img src="/img/transfiguration-01.png" alt="The Transfiguration" />
+  <img :src="route.meta.featuredImage" alt="The Transfiguration" />
 
   <h1>{{ route.meta.title }}</h1>
 

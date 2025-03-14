@@ -8,7 +8,7 @@ const routes = router.getRoutes().filter(route => route.path.includes('insights'
   <div class="flex items-start mb-6" v-for="post in routes" :key="post.path">
     <!-- Image -->
     <NuxtLink :to="post.path">
-      <img :src="post.meta.featuredImage" :alt="post.meta.title" class="w-32 h-32 object-cover mr-4" />
+      <img :src="post.meta.thumbImage" :alt="post.meta.title" class="w-32 h-32 object-cover mr-4" />
     </NuxtLink>
     <!-- Content -->
     <div class="flex-1">

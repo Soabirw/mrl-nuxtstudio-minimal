@@ -4,6 +4,7 @@ definePageMeta({
   title: 'Luminous Mystery: Wedding at Cana',
   excerpt: 'Discover the profound connection between Mary, Jesus, and our own faith through the Wedding at Cana. This Luminous Mystery beautifully illustrates Mary’s role as our loving intercessor, from biblical times to modern Marian apparitions like Fatima and Lourdes. Learn how her message—\'Do whatever He tells you\'—guides us to trust in Jesus, deepen our spiritual life, and embrace the power of prayer and obedience. Read on to explore the biblical parallels and timeless wisdom of Mary’s role in our lives.',
   featuredImage: '/img/wedding-cana-01.png',
+  thumbImage: '/img/wedding-cana-01-thumb.png',
   layout: 'insight'
 })
 
@@ -13,7 +14,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <img src="/img/wedding-cana-01.png" alt="The Wedding at Cana" />
+  <img :src="route.meta.featuredImage" alt="The Wedding at Cana" />
 
   <h1>{{ title }}</h1>
 
