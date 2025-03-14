@@ -7,9 +7,10 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
   devtools: { enabled: true },
-  css: [
-      './assets/css/tailwind.css'
-  ],
+  tailwindcss: {
+    configPath: './tailwind.config.ts', // Make sure this matches your actual file name
+    cssPath: '~/assets/css/tailwind.css'
+  },
   future: {
     compatibilityVersion: 4,
   },
