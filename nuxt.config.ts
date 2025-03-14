@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/content',
     '@nuxt/ui',
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
@@ -12,11 +11,8 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: [
-          '/',
-          '/rosaries',
-          '/rosaries/full'
-      ],
-      ignore: ['/api']
+          '/'
+      ]
     }
   },
   devtools: { enabled: true },

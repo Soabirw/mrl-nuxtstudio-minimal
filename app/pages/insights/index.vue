@@ -1,23 +1,21 @@
 <script setup lang="ts">
-  const { data: posts } = await useAsyncData('insight-list', () => queryCollection('insights')
-      .all()
-  )
-
-  console.log(posts)
+const currentRoute = useRoute()
+const router = useRouter()
+const routes = router.getRoutes().filter(route => route.path.includes('insights') && route.path !== currentRoute.path)
 </script>
 
 <template>
-  <div class="flex items-start mb-6" v-for="post in posts" :key="post.path">
+  <div class="flex items-start mb-6" v-for="post in routes" :key="post.path">
     <!-- Image -->
     <NuxtLink :to="post.path">
-      <img :src="post.image" :alt="post.title" class="w-32 h-32 object-cover mr-4" />
+      <img :src="post.meta.featuredImage" :alt="post.meta.title" class="w-32 h-32 object-cover mr-4" />
     </NuxtLink>
     <!-- Content -->
     <div class="flex-1">
       <NuxtLink :to="post.path">
-        <h2 class="text-xl font-semibold mb-2">{{ post.title }}</h2>
+        <h2 class="text-xl font-semibold mb-2">{{ post.meta.title }}</h2>
       </NuxtLink>
-      <p class="text-gray-600">{{ post.description }}</p>
+      <p class="text-gray-600">{{ post.meta.excerpt }}</p>
     </div>
   </div>
 </template>
